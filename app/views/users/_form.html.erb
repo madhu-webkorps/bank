@@ -1,0 +1,39 @@
+<%= form_with(model: user, local: true) do |form| %>
+  
+
+  <div class = "container">
+<div class="field">
+    <%= form.label :role %>
+    <%= form.text_field :role %>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div><br>+
+
+  <div class="field">
+    <%= form.label :aadhar %>
+    <%= form.text_field :aadhar %>
+  </div><br>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-primary" %>
+  </div><br>
+  </div>
+<% end %>

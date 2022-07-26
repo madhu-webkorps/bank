@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amt_withdrawn: 
+  withdraw_time: 2022-07-26 07:22:18
+  amt_deposite: 
+  deposite_time: 2022-07-26 07:22:18
+  user: one
+  account: 
+
+two:
+  amt_withdrawn: 
+  withdraw_time: 2022-07-26 07:22:18
+  amt_deposite: 
+  deposite_time: 2022-07-26 07:22:18
+  user: two
+  account: 

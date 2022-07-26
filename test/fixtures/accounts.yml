@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  balance: 
+  type: 
+  acc_no: MyString
+  acc_status: MyString
+
+two:
+  user: two
+  balance: 
+  type: 
+  acc_no: MyString
+  acc_status: MyString
