@@ -16,8 +16,8 @@ class UsersController < ApplicationController
 
   def create
       @user = User.new(user_params)
-      if @user.save
-          redirect_to users_path
+        if @user.save
+           redirect_to users_path(id: params[:id]).first
       else
           # rnder create page agian
       end

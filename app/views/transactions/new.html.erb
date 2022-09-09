@@ -1,0 +1,37 @@
+<div class = "container ">
+<br><br>
+<h3>Enter Ammount You want to Deposite</h3>
+  <%= form_with model:  @transaction, method: :post , url:transactions_path(@transaction) do |f| %>
+   <%# <%= hidden_field_tag :user_id, current_user.id %> 
+   <%# <%= hidden_field_tag :account_id, current_user.account.id %> 
+<% if user_signed_in? %>
+    <br><br>
+    <div>
+     <%= f.label :user_id %>
+      <%= f.number_field :user_id, value: current_user.id %>
+    </div><br><br>
+    <div>
+     <%= f.label :account_id %>
+      <%= f.number_field :account_id, value: current_user.account.id %>
+    </div><br>
+
+    <div class="field">
+      <%= f.label :deposite_amt %>
+      <%= f.number_field :deposite_amt %>
+    </div>
+    <br>
+    <div class="actions">
+     <%= f.submit class:"btn btn-primary" %>
+    </div><br>
+  <%# <%= @account.balance  += @account.ammount%> 
+<% else %>
+  <h1>Hello </h1>
+
+<%end%>
+<%end%>
+
+
+
+</div>
+
+

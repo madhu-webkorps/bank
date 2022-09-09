@@ -34,13 +34,19 @@
   <%= @user.aadhar %>
 </p>
 
+<p>
+  <strong>Balance : </strong>
+  <%= @user.balance %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
 
-<%= link_to 'WithDraw', withdraw_path(@user.id)%>
 
-<%= link_to 'Deposite', withdraw_path(@user.id)%>
+<%= link_to 'Deposite',  new_transaction_path%>
+
+<%= link_to 'WtihDraw', withdraw_path(@user.account.id)%>
 
 
 </div>

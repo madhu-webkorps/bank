@@ -1,0 +1,31 @@
+<%= form_with(model: @account, local: true) do |form| %>
+  
+
+  <div class = "container"><br><br><br>
+<div class="field">
+<% if user_signed_in?%>
+
+  <% id = current_user.id %><br>
+    <%= form.label :user_id  %>
+    <%= form.text_field :user_id, value: id %>
+  </div><br><br>
+
+    
+ <%# <%= f.hidden_field :field, value: number %> 
+ 
+
+  <div class="field">
+    <%= form.label :acc_status %>
+    <%= form.text_field :acc_status %>
+  </div><br>
+
+  
+
+  <div class="actions">
+    <%= form.submit  "Save",class:"btn btn-primary" %>
+  </div><br>
+
+  <% end%>
+
+  </div>
+<% end %>

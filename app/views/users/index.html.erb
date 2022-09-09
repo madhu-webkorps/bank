@@ -21,6 +21,10 @@
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Role</th>
+                         <th scope="col">Phone</th>
+                          <th scope="col">Account Id</th>
+                          <th>Account Status </th>
+                           
                         <%# <th scope="col">Age</th> %>
                         <th colspan="2">Action</th>
 
@@ -41,6 +45,13 @@
                             </td>
                             <td>
                                 <%= user.role%>
+                            </td>
+                            <td>
+                                <%= user.phone%>
+                            </td>
+                          
+                            <td>
+                            /    <%= user.account.id %>
                             </td>
                             
                             <td>
@@ -68,12 +79,28 @@
                             <td>
                                 <%= @user.role%>
                             </td>
+                            <td>
+                                <%= @user.phone%>
+                            </td>
+                          
+                            <td>
+                           
+                                <%= @user.account.id %>
+                            </td>
+
+                            <td>
+                           
+                                <%= @user.account.acc_status %>
+                            </td>
+                            
                             
                             <td>
+                                <%= link_to "Fill details" , new_account_path, class: "btn btn-success" %>
+                            
                                  <%= link_to "Edit" , edit_user_path(@user), class: "btn btn-primary" %>
                             
                             
-                               redirect_to<%= link_to "Delete" ,user_path(@user) , method: :delete  , class: "btn btn-danger" %>
+                               <%= link_to "Delete" ,user_path(@user) , method: :delete  , class: "btn btn-danger" %>
                            
                             </td>
                             </tr>

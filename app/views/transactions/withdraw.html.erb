@@ -1,0 +1,12 @@
+<h1>withdraw page</h1>
+<p>Total balance</p>
+<%= @account.balance%>
+<h1>Enter Ammount you to add</h1>
+<%= form_for(@transaction, url: transactions_path(@transaction), html: { method: :put }) do |f| %>
+  <%= f.text_field :amt_deposite %>
+ 
+  <%= f.button :submit %>
+
+  <%= @account.balance  += @transcation.amt_deposite%>
+<% end %>
+ 
